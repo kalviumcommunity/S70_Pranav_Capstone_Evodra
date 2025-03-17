@@ -40,3 +40,25 @@ Fast fashion contributes to **waste & pollution**, while many young people strug
 ✅ **Day 27-28**: Submit the **Capstone Project**  
 
 ## 📂 Folder Structure  
+
+## 🔗 Deployment Links  
+- **Frontend:** [Coming Soon](#)  
+- **Backend:** [Coming Soon](#)  
+- **Figma Designs:** [Low-Fidelity](#) | [High-Fidelity](#)  
+
+## 🛠️ Features Implemented  
+✅ User authentication (JWT/Firebase)  
+✅ CRUD operations for product listing  
+✅ File Upload functionality (Image upload for products)  
+✅ Responsive UI with animations  
+✅ Thrift store-specific filters (category, price, brand, size)  
+
+---
+
+📌 **Contributors:**  
+👨‍💻 Pranav (Squad 70)  
+
+---
+
+### **🔥 Ready to build Evodra! 🚀**
+

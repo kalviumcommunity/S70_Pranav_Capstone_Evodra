@@ -4,12 +4,15 @@ const {
   getAllUsers,
   getUserNames,
   getUserIds,
-  getSingleUser
+  getSingleUser,
+  createUser,
 } = require('../controllers/userController');
 
 router.get('/', getAllUsers);
 router.get('/names', getUserNames);
 router.get('/ids', getUserIds);
 router.get('/:id', getSingleUser);
+
+router.post('/', createUser);
 
 module.exports = router;

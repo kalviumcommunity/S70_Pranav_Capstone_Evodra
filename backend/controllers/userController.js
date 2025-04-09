@@ -36,9 +36,21 @@ const getSingleUser = async (req, res) => {
   }
 };
 
+const createUser = async (req, res) => {
+  try {
+    const newUser = new User(req.body);
+    const savedUser = await newUser.save();
+    res.status(201).json(savedUser);
+  } catch (error) {
+    res.status(400).json({ message: error.message });
+  }
+};
+
+
 module.exports = {
   getAllUsers,
   getUserNames,
   getUserIds,
   getSingleUser,
+  createUser, 
 };

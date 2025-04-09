@@ -10,6 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 
+// creating routes here 
 const userRoutes = require('./routes/userRoutes');
 const productRoutes = require('./routes/productRoutes');
 const orderRoutes = require('./routes/orderRoutes');

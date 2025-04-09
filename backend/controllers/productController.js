@@ -9,4 +9,36 @@ const getAllProducts = async (req, res) => {
   }
 };
 
-module.exports = { getAllProducts };
+const getProductNames = async (req, res) => {
+  try {
+    const names = await Product.find({}, 'name');
+    res.status(200).json(names);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+const getProductIds = async (req, res) => {
+  try {
+    const ids = await Product.find({}, '_id');
+    res.status(200).json(ids);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+const getSingleProduct = async (req, res) => {
+  try {
+    const product = await Product.findById(req.params.id);
+    res.status(200).json(product);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+module.exports = {
+  getAllProducts,
+  getProductNames,
+  getProductIds,
+  getSingleProduct,
+};

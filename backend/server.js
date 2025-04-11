@@ -28,7 +28,7 @@ app.use('/api/orders', orderRoutes);
 //   .then(() => console.log('MongoDB connected successfully'))
 //   .catch((err) => console.error(err));
 
-// here i used the mongo connection part in db.js
+// here i replace the used mongo connection part in db.js
 
 
 

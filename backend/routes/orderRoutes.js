@@ -8,11 +8,13 @@ const {
   updateOrder
 } = require('../controllers/orderController');
 
+// GET routes
 router.get('/', getAllOrders);
 router.get('/ids', getOrderIds);
 router.get('/:id', getSingleOrder);
 
-router.get('/', createOrder);
-router.put('/', updateOrder);
+// POST and PUT routes
+router.post('/', createOrder);
+router.put('/:id', updateOrder);
 
 module.exports = router;

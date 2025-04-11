@@ -46,11 +46,27 @@ const createUser = async (req, res) => {
   }
 };
 
+const updateUser = async (req, res) => {
+  try {
+    const updatedUser = await User.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true }
+    );
+    res.status(200).json(updatedUser);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+
 
 module.exports = {
   getAllUsers,
   getUserNames,
   getUserIds,
   getSingleUser,
-  createUser, 
+  createUser,
+  updateUser,
 };
+

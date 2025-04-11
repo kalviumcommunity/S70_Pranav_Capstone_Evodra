@@ -40,11 +40,24 @@ const createOrder = async (req, res) => {
     res.status(400).json({ message: error.message });
   }
 };
+const updateOrder = async (req, res) => {
+  try {
+    const updatedOrder = await Order.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true }
+    );
+    res.status(200).json(updatedOrder);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
 
 
 module.exports = {
   getAllOrders,
   getOrderIds,
   getSingleOrder,
-  createOrder, 
+  createOrder,
+  updateOrder,
 };

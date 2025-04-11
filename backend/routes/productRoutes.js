@@ -8,6 +8,7 @@ const {
   getProductIds,
   getSingleProduct,
   createProduct,
+  updateProduct,
 } = require('../controllers/productController');
 
 
@@ -17,5 +18,7 @@ router.get('/', getAllProducts);
 router.get('/names', getProductNames);
 router.get('/ids', getProductIds);
 router.get('/:id', getSingleProduct);
+router.put('/:id', updateProduct);
+
 
 module.exports = router;
